@@ -1,0 +1,40 @@
+# Build and dependency files
+bin/
+obj/
+*.dll
+*.exe
+*.log
+
+# NuGet package files
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# Visual Studio cache and settings files
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Temporary system files
+*.tmp
+*.temp
+*.pid
+*.gz
+*.swp
+.DS_Store
+Thumbs.db
+
+# Publishing generated files
+publish/
+wwwroot/
+
+# Code coverage test results
+TestResults/
+
+# Lock and project version files
+project.lock.json
+project.fragment.lock.json
