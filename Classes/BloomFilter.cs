@@ -15,12 +15,8 @@ namespace BloomFilter.Services {
             this.p = p;
             this.m = (int)Math.Ceiling((n* Math.Log(p)) / Math.Log(1 / Math.Pow(2, Math.Log(2))));
             this.k = Convert.ToInt16(Math.Round((double)m / n) * Math.Log(2));
-            GC.Collect();
-            long memoriaAntes = GC.GetTotalMemory(true);
             this.bitarr = new BitArray(this.m, false);
-            long memoriaDepois = GC.GetTotalMemory(true);
-            long tamanho = memoriaDepois - memoriaAntes;
-            Console.WriteLine($"Tamanho estimado de MinhaClasse: {tamanho} bytes");
+
         }
 
 
@@ -46,7 +42,6 @@ namespace BloomFilter.Services {
             }
             return positions;
         }
-        
         private int GetSHA256Integer(string element) {
             using (SHA256 sha256 = SHA256.Create()) {
                 byte[] digest = sha256.ComputeHash(Encoding.UTF8.GetBytes(element));
