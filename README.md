@@ -7,7 +7,7 @@ A simple Bloom Filter implementation made with C# for study.
 To clone the repository and build the project:
 
 ```bash
-git clone https://github.com/your-username/BloomFilter.git
+git clone https://github.com/BielDespair/BloomFilter.git
 cd BloomFilter
 dotnet build
 ```
